@@ -15,10 +15,14 @@ namespace Tree
 
         public readonly Dictionary<long, NodeLink> Links;
 
-        public Tree()
+        public Tree(int linkNumber = 0, int dataNumber = 0)
         {
-            Data = new Dictionary<long, T>();
-            Links = new Dictionary<long, NodeLink>();
+            Data = dataNumber > 0
+                ? new Dictionary<long, T>(dataNumber)
+                : new Dictionary<long, T>();
+            Links = linkNumber > 0
+                ? new Dictionary<long, NodeLink>(linkNumber)
+                : new Dictionary<long, NodeLink>();
         }
 
         public List<long> Roots { get; } = new List<long>();
