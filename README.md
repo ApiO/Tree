@@ -2,7 +2,7 @@
 A c# (1-n) tree implementation. To populate this tree just use the addChild function.
 
 ##Project
-- Compatibility: .NET 3.5 and more
+- Compatibility: .NET 4.5
 - Solution VS 2015
 
 ##Design constraint
