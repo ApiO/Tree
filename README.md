@@ -3,6 +3,8 @@
 A c# (1-n) tree implementation.
 This lib was designed to respond to a specific need and can be more generic/reusable, no efforts has been made on that way. For now, the code is left as this.
 
+[Nuget package](https://www.nuget.org/packages/Tree/)
+
 ##Project
 
 - Compatibility: .NET 4.5
