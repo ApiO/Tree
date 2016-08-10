@@ -15,14 +15,19 @@ namespace Tree
 
         public readonly Dictionary<long, NodeLink> Links;
 
-        public Tree(int linkNumber = 0, int dataNumber = 0)
+        public Tree()
         {
-            Data = dataNumber > 0
-                ? new Dictionary<long, T>(dataNumber)
-                : new Dictionary<long, T>();
-            Links = linkNumber > 0
-                ? new Dictionary<long, NodeLink>(linkNumber)
-                : new Dictionary<long, NodeLink>();
+            Data =  new Dictionary<long, T>();
+            Links = new Dictionary<long, NodeLink>();
+        }
+
+        public Tree(int capacity)
+        {
+            if(capacity<0)
+                throw new ArgumentOutOfRangeException(nameof(capacity), $"{nameof(capacity)} cannot be negative.");
+
+            Data = new Dictionary<long, T>(capacity);
+            Links = new Dictionary<long, NodeLink>(capacity);
         }
 
         public List<long> Roots { get; } = new List<long>();
@@ -84,7 +89,7 @@ namespace Tree
 
             Leaves.Add(id);
         }
-
+        
         public IEnumerator GetEnumerator()
         {
             return Links.Select(x => x.Value).GetEnumerator();
