@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Tree")]
-[assembly: AssemblyDescription("A c# (1-n) tree implementation")]
+[assembly: AssemblyDescription("A C# (1-n) tree implementation")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("ApiO")]
 [assembly: AssemblyProduct("Tree")]
