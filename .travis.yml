@@ -1,8 +1,8 @@
 language: csharp
-solution: ./Tree/tree.sln
+solution: Tree.sln
 install:
-  - nuget restore ./Tree/Tree.sln
+  - nuget restore Tree.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
-  - xbuild /p:Configuration=Release ./Tree/Tree.sln
+  - xbuild /p:Configuration=Release Tree.sln
   - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Tree.Tests/bin/Release/Tree.Tests.dll
