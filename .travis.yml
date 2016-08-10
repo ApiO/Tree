@@ -5,3 +5,4 @@ install:
 script:
   - xbuild /p:Configuration=Release ./Tree/Tree.sln
   - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Tree/Tree.Tests/bin/Release/Tree.Tests.dll
+os: windows
