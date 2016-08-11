@@ -1,11 +1,17 @@
 #Tree
 
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/ApiO/Tree/blob/master/LICENSE) [![Build Status](https://travis-ci.org/ApiO/Tree.svg?branch=master)](https://travis-ci.org/ApiO/Tree)
-
 A c# (1-n) tree implementation.
 This lib was designed to respond to a specific need and can be more generic/reusable, no efforts has been made on that way. For now, the code is left as this.
 
-[Nuget package](https://www.nuget.org/packages/Tree/)
+[Download NuGet package](https://www.nuget.org/packages/Tree/)
+
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/ApiO/Tree/blob/master/LICENSE)
+
+| Build server                | Platform     | Status                                                                                                                    |
+|-----------------------------|--------------|---------------------------------------------------------------------------------------------------------------------------|
+| AppVeyor                    | Windows      | [![Build status](https://ci.appveyor.com/api/projects/status/o1veopcf7g5syuy2/branch/master?svg=true)](https://ci.appveyor.com/project/ApiO/tree/branch/master)      |
+| Travis                      | Linux | [![Build Status](https://travis-ci.org/ApiO/Tree.svg?branch=master)](https://travis-ci.org/ApiO/Tree) |
+
 
 ##Project
 
