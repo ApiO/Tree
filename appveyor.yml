@@ -19,4 +19,4 @@ environment:
        secure: rUUbYlqy0lB25hvNeMcyrrjUmuYbwfXgBXrpX++IFOXddPbupROFw1OJ97yqm7gQ
        
 after_test: 
- - cmd: packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -filter:"+[*]*" -target:"packages\NUnit.ConsoleRunner.3.4.1\tools\nunit3-console.exe" -targetargs:"/domain:single Tree/Tree.NUnit\bin\Release\Tree.NUnit.dll" -output:coverage.xml
+ - cmd: packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -filter:"+[*]*" -target:"packages\NUnit.ConsoleRunner.3.4.1\tools\nunit3-console.exe" -targetargs:"/domain:single Tree\Tree.NUnit\bin\Release\Tree.NUnit.dll" -output:coverage.xml
