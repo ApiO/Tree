@@ -6,7 +6,7 @@ platform: Any CPU
 
 build:
   project: Tree/Tree.NUnit.sln
-  verbosity: detailed
+  verbosity: minimal
   
 test:
   assemblies: Tree.NUnit.dll
