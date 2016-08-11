@@ -1,6 +1,10 @@
 #Tree
 
-[![NuGet](https://img.shields.io/nuget/v/Tree.svg)](https://www.nuget.org/packages/Tree) [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/ApiO/Tree/blob/master/LICENSE) [![Coverage Status](https://coveralls.io/repos/github/ApiO/Tree/badge.svg?branch=master)](https://coveralls.io/github/ApiO/Tree?branch=master)
+[![GitHub release](https://img.shields.io/github/release/ApiO/Tree.svg?maxAge=2592000)]()
+[![NuGet](https://img.shields.io/nuget/v/Tree.svg)](https://www.nuget.org/packages/Tree)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/ApiO/Tree/blob/master/LICENSE)
+[![Coverage Status](https://coveralls.io/repos/github/ApiO/Tree/badge.svg?branch=master)](https://coveralls.io/github/ApiO/Tree?branch=master) 
+[![Framework version](https://img.shields.io/badge/.Net-4.5-green.svg?maxAge=2592000)]()
 
 A c# (1-n) tree implementation.
 This lib was designed to respond to a specific need and can be more generic/reusable, no efforts has been made on that way. For now, the code is left as this.
