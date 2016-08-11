@@ -6,3 +6,5 @@ build:
   verbosity: minimal
 test:
   assemblies: Tree.NUnit.dll
+before_build:
+  - nuget restore ".\Tree\Tree.NUint.sln"
