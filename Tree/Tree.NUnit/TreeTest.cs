@@ -98,7 +98,7 @@ namespace Tree.NUnit
         {
             Assert.Throws<ArgumentOutOfRangeException>(() =>
             {
-                var tree = new Tree<int>(-42);
+                new Tree<int>(-42);
             });
         }
     }
