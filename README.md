@@ -10,6 +10,7 @@ This lib was designed to respond to a specific need and can be more generic/reus
 | AppVeyor                    | Windows      | [![Build status](https://ci.appveyor.com/api/projects/status/o1veopcf7g5syuy2/branch/master?svg=true)](https://ci.appveyor.com/project/ApiO/tree/branch/master)      |
 | Travis                      | Linux | [![Build Status](https://travis-ci.org/ApiO/Tree.svg?branch=master)](https://travis-ci.org/ApiO/Tree) |
 
+[![Code Climate](https://codeclimate.com/github/ApiO/Tree/badges/gpa.svg)](https://codeclimate.com/github/ApiO/Tree) [![Test Coverage](https://codeclimate.com/github/ApiO/Tree/badges/coverage.svg)](https://codeclimate.com/github/ApiO/Tree/coverage) [![Issue Count](https://codeclimate.com/github/ApiO/Tree/badges/issue_count.svg)](https://codeclimate.com/github/ApiO/Tree)
 
 ##Project
 
