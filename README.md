@@ -1,6 +1,6 @@
 #Tree
 
-[![NuGet](https://img.shields.io/nuget/v/Tree.svg)](https://www.nuget.org/packages/Tree) [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/ApiO/Tree/blob/master/LICENSE)
+[![NuGet](https://img.shields.io/nuget/v/Tree.svg)](https://www.nuget.org/packages/Tree) [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/ApiO/Tree/blob/master/LICENSE) [![Coverage Status](https://coveralls.io/repos/github/ApiO/Tree/badge.svg?branch=master)](https://coveralls.io/github/ApiO/Tree?branch=master)
 
 A c# (1-n) tree implementation.
 This lib was designed to respond to a specific need and can be more generic/reusable, no efforts has been made on that way. For now, the code is left as this.
@@ -10,7 +10,6 @@ This lib was designed to respond to a specific need and can be more generic/reus
 | AppVeyor                    | Windows      | [![Build status](https://ci.appveyor.com/api/projects/status/o1veopcf7g5syuy2/branch/master?svg=true)](https://ci.appveyor.com/project/ApiO/tree/branch/master)      |
 | Travis                      | Linux | [![Build Status](https://travis-ci.org/ApiO/Tree.svg?branch=master)](https://travis-ci.org/ApiO/Tree) |
 
-[![Coverage Status](https://coveralls.io/repos/github/ApiO/Tree/badge.svg?branch=master)](https://coveralls.io/github/ApiO/Tree?branch=master)
 
 ##Project
 
