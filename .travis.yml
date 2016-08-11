@@ -1,2 +1,2 @@
 language: csharp
-solution: ./Tree/Tree.sln
+solution: ./Tree/Tree.lib.sln
