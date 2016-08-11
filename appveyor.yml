@@ -1,0 +1,10 @@
+version: 1.0.{build}
+configuration: Release
+platform: Any CPU
+build:
+  project: Tree/Tree.NUnit.sln
+  verbosity: minimal
+test:
+  assemblies: Tree.NUnit.dll
+before_build:
+  - nuget restore ".\Tree\Tree.NUnit.sln"
