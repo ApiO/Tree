@@ -7,4 +7,4 @@ build:
 test:
   assemblies: Tree.NUnit.dll
 before_build:
-  - nuget restore ".\Tree\Tree.NUint.sln"
+  - nuget restore ".\Tree\Tree.NUnit.sln"
