@@ -3,8 +3,16 @@ configuration: Release
 platform: Any CPU
 build:
   project: Tree/Tree.NUnit.sln
-  verbosity: minimal
+  verbosity: detailed
 test:
   assemblies: Tree.NUnit.dll
 before_build:
   - nuget restore ".\Tree\Tree.NUnit.sln"
+environment:
+    COVERALLS_REPO_TOKEN:  
+       secure: rUUbYlqy0lB25hvNeMcyrrjUmuYbwfXgBXrpX++IFOXddPbupROFw1OJ97yqm7gQ
+after_test: 
+# generate report for NUnit testing framework:
+    -cmd: packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -filter:"+[*]*" -target:"packages\NUnit.Runners.3.4.1\tools\nunit-console.exe" -targetargs:"/noshadow /domain:single Tree\Tree.NUnit\bin\Release\Tree.NUnit.dll" -output:coverage.xml
+# generate report for MSTest testing framework:
+   - cmd: packages\coveralls.io.1.3.4\tools\coveralls.net.exe --opencover coverage.xml
