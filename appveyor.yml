@@ -1,0 +1,8 @@
+version: 1.0.{build}
+configuration: Release
+platform: Any CPU
+build:
+  project: Tree/Tree.lib.sln
+  verbosity: minimal
+test:
+  assemblies: Tree.Tests.dll
