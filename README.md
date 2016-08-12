@@ -13,7 +13,7 @@ This lib was designed to respond to a specific need and can be more generic/reus
 | AppVeyor                    | Windows      | [![Build status](https://ci.appveyor.com/api/projects/status/o1veopcf7g5syuy2/branch/master?svg=true)](https://ci.appveyor.com/project/ApiO/tree/branch/master)      |
 | Travis                      | Linux | [![Build Status](https://travis-ci.org/ApiO/Tree.svg?branch=master)](https://travis-ci.org/ApiO/Tree) |
 
-[![Coverage Status](https://coveralls.io/repos/github/ApiO/Tree/badge.svg?branch=master)](https://coveralls.io/github/ApiO/Tree?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/ApiO/Tree/badge.svg)](https://coveralls.io/github/ApiO/Tree)
 
 ##Design constraint
 
