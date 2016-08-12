@@ -4,19 +4,16 @@ configuration: Release
 
 platform: Any CPU
 
-build:
-  project: Tree/Tree.NUnit.sln
-  verbosity: minimal
-  
-test:
-  assemblies: Tree.NUnit.dll
+environment:
+  COVERALLS_REPO_TOKEN:  
+    secure: oxB2l7vHmBZHBJbl8pFZIGUao5m426LkQInK8WFv235cjMPLzPR+Wz3mdbYTSawM
   
 before_build:
   - nuget restore ".\Tree\Tree.NUnit.sln"
   
-environment:
-  COVERALLS_REPO_TOKEN:  
-    secure: oxB2l7vHmBZHBJbl8pFZIGUao5m426LkQInK8WFv235cjMPLzPR+Wz3mdbYTSawM
-
+build:
+  project: Tree/Tree.NUnit.sln
+  verbosity: minimal
+  
 after_test: 
  - cmd: Tree\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -filter:"+[*]*" -target:"Tree\packages\NUnit.ConsoleRunner.3.4.1\tools\nunit3-console.exe" -targetargs:"/domain:single Tree\Tree.NUnit\bin\Release\Tree.NUnit.dll" -output:coverage.xml
