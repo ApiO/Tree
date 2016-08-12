@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using NUnit.Framework;
 
 namespace Tree.NUnit
@@ -50,7 +52,6 @@ namespace Tree.NUnit
             _tree.AddChild(null, _root2Id, _root2Data);
             _tree.AddChild(_root1Id, _child1Id, _child1Data);
             _tree.AddChild(_root1Id, _child2Id, _child2Data);
-
         }
 
         [Test]
@@ -119,6 +120,12 @@ namespace Tree.NUnit
             {
                 _tree.AddChild(null, _root1Id, _root1Data);
             });
+        }
+
+        [Test]
+        public void EnumeratorReachable()
+        {
+            Assert.IsTrue(_tree.Cast<NodeLink>().Count() == 4);
         }
 
         [Test]
