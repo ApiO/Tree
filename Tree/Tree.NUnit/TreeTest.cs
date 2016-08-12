@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 
@@ -54,6 +53,15 @@ namespace Tree.NUnit
             _tree.AddChild(_root1Id, _child2Id, _child2Data);
         }
 
+
+        [Test]
+        public void CtorArgumentOutOfRangeException()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => {
+                 new Tree<int>(-42);
+            });
+        }
+
         [Test]
         public void InitializationCheck()
         {
@@ -67,6 +75,18 @@ namespace Tree.NUnit
             Assert.IsNotNull(_tree.Roots);
             Assert.IsTrue(_tree.Roots.Count == 2);
             Assert.IsTrue(_tree.Roots[0] == _root1Id);
+        }
+
+        [Test]
+        public void RoorExists()
+        {
+            Assert.IsNotNull(_tree.Roots);
+        }
+
+        [Test]
+        public void LeafExists()
+        {
+            Assert.IsNotNull(_tree.Leaves);
         }
 
         [Test]
@@ -131,10 +151,10 @@ namespace Tree.NUnit
         [Test]
         public void ParentNotFoundArgumentException()
         {
-            Assert.Throws<ArgumentException>(() =>
-            {
+            Assert.Throws<ArgumentException>(() => {
                 _tree.AddChild(99999999, 42, new Dummy());
             });
         }
+
     }
 }
