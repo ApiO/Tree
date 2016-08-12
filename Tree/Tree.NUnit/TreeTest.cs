@@ -52,13 +52,21 @@ namespace Tree.NUnit
             _tree.AddChild(_root1Id, _child1Id, _child1Data);
             _tree.AddChild(_root1Id, _child2Id, _child2Data);
         }
-
+        
+        [Test]
+        public void CtorOk()
+        {
+            Assert.DoesNotThrow(() => {
+                new Tree<int>();
+                new Tree<int>(42);
+            });
+        }
 
         [Test]
         public void CtorArgumentOutOfRangeException()
         {
             Assert.Throws<ArgumentOutOfRangeException>(() => {
-                 new Tree<int>(-42);
+                new Tree<int>(-42);
             });
         }
 
@@ -134,18 +142,18 @@ namespace Tree.NUnit
         }
 
         [Test]
+        public void EnumeratorReachable()
+        {
+            Assert.IsTrue(_tree.Cast<NodeLink>().Count() == 4);
+        }
+
+        [Test]
         public void NodeAlreadyExistsArgumentException()
         {
             Assert.Throws<ArgumentException>(() =>
             {
                 _tree.AddChild(null, _root1Id, _root1Data);
             });
-        }
-
-        [Test]
-        public void EnumeratorReachable()
-        {
-            Assert.IsTrue(_tree.Cast<NodeLink>().Count() == 4);
         }
 
         [Test]
