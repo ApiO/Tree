@@ -41,10 +41,10 @@ namespace Tree
         public void AddChild(long? parentId, long id, T data)
         {
             if (Data.ContainsKey(id))
-                throw new Exception($"id {id} already exists in tree.");
+                throw new ArgumentException($"id {id} already exists in tree.");
 
             if (parentId != null && !Data.ContainsKey((long)parentId))
-                throw new Exception($"parentId {parentId} not found in tree.");
+                throw new ArgumentException($"parentId {parentId} not found in tree.");
 
             var link = new NodeLink { Id = id, Parent = parentId };
             var depth = 0;
@@ -68,9 +68,6 @@ namespace Tree
                 }
                 else
                 {
-                    if (!Leaves.Contains((long)parentId))
-                        throw new Exception($"parentId {parentId} not found in tree.");
-
                     Leaves.Remove((long)parentId);
                 }
                 parentLink.Child = id;
