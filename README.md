@@ -5,6 +5,8 @@
 A c# (1-n) tree implementation.
 This lib was designed to respond to a specific need and can be more generic/reusable, no efforts has been made on that way. For now, the code is left as this.
 
+##Project
+
 [![Framework version](https://img.shields.io/badge/.Net-4.5-green.svg?maxAge=2592000)]() [![Project version](https://img.shields.io/badge/VS-2015-brightgreen.svg?maxAge=2592000)]()
 
 ##QA
@@ -15,12 +17,6 @@ This lib was designed to respond to a specific need and can be more generic/reus
 | Travis                      | Linux | [![Build Status](https://travis-ci.org/ApiO/Tree.svg?branch=master)](https://travis-ci.org/ApiO/Tree) |
 
 [![Coverage Status](https://coveralls.io/repos/github/ApiO/Tree/badge.svg?branch=master)](https://coveralls.io/github/ApiO/Tree?branch=master) 
-
-##Project
-
-- Compatibility: .NET 4.5
-- Solution VS 2015
-
 
 ##Design constraint
 
