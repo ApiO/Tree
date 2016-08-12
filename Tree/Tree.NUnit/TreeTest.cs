@@ -66,9 +66,8 @@ namespace Tree.NUnit
         [Test]
         public void CtorArgumentOutOfRangeException()
         {
-            Assert.That(() =>
-                { new Tree<int>(-42); },
-                Throws.Exception.TypeOf<ArgumentNullException>());
+            var ex = Assert.Throws<ArgumentNullException>(() =>{ new Tree<int>(-42); });
+            Assert.That(ex.ParamName, Is.EqualTo("capacity"));
         }
 
         [Test]
@@ -165,6 +164,5 @@ namespace Tree.NUnit
                 _tree.AddChild(99999999, 42, new Dummy());
             });
         }
-
     }
 }
