@@ -16,7 +16,7 @@ platform: Any CPU
 environment:
  COVERALLS_REPO_TOKEN:  
   secure: oxB2l7vHmBZHBJbl8pFZIGUao5m426LkQInK8WFv235cjMPLzPR+Wz3mdbYTSawM
-  
+
 before_build:
  - nuget restore ".\Tree\Tree.NUnit.sln"
  - nuget install OpenCover -Version 4.6.519 -OutputDirectory Tree\packages
@@ -25,15 +25,7 @@ before_build:
 build:
   project: Tree/Tree.NUnit.sln
   verbosity: detailed
-  
-#after_test: 
-# # generate report for NUnit 3 testing framework:
-# - cmd: .\Tree\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -filter:"+[*]*" -target:"Tree\packages\NUnit.ConsoleRunner.3.4.1\tools\nunit3-console.exe" -targetargs:"/domain:single Tree\Tree.NUnit\bin\Release\Tree.NUnit.dll" -output:coverage.xml
-# - cmd: .\Tree\packages\coveralls.net.0.6.0\tools\csmacnz.Coveralls.exe --opencover -i .\coverage.xml
 
-test_script:
-- ps: >-
- .\Tree\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -filter:"+[*]*" -target:"Tree\packages\NUnit.ConsoleRunner.3.4.1\tools\nunit3-console.exe" -targetargs:"/domain:single Tree\Tree.NUnit\bin\Release\Tree.NUnit.dll" -output:opencoverCoverage.xml
- $coveralls = (Resolve-Path "Tree/packages/coveralls.net.*/tools/csmacnz.Coveralls.exe").ToString()
- $env:APPVEYOR_BUILD_NUMBER
- & $coveralls --opencover -i opencoverCoverage.xml --repoToken $env:COVERALLS_REPO_TOKEN --useRelativePaths --commitId $env:APPVEYOR_REPO_COMMIT --commitBranch $env:APPVEYOR_REPO_BRANCH --commitAuthor $env:APPVEYOR_REPO_COMMIT_AUTHOR --commitEmail $env:APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL --commitMessage $env:APPVEYOR_REPO_COMMIT_MESSAGE --jobId $env:APPVEYOR_BUILD_NUMBER --serviceName appveyor
+on_success:
+ - cmd: .\Tree\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -filter:"+[*]*" -target:"Tree\packages\NUnit.ConsoleRunner.3.4.1\tools\nunit3-console.exe" -targetargs:"/domain:single Tree\Tree.NUnit\bin\Release\Tree.NUnit.dll" -output:coverage.xml
+ - cmd: .\Tree\packages\coveralls.net.0.6.0\tools\csmacnz.Coveralls.exe --opencover -i .\coverage.xml
