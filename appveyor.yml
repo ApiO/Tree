@@ -4,19 +4,21 @@ configuration: Release
 
 platform: Any CPU
 
+environment:
+ COVERALLS_REPO_TOKEN:  
+  secure: oxB2l7vHmBZHBJbl8pFZIGUao5m426LkQInK8WFv235cjMPLzPR+Wz3mdbYTSawM
+  
+before_build:
+ - nuget restore ".\Tree\Tree.NUnit.sln"
+ - nuget install OpenCover -Version 4.6.519 -OutputDirectory Tree\packages
+ - nuget install coveralls.net -Version 0.6.0 -OutputDirectory Tree\packages
+  
 build:
   project: Tree/Tree.NUnit.sln
   verbosity: detailed
   
-test:
-  assemblies: Tree.NUnit.dll
-  
-before_build:
-  - nuget restore ".\Tree\Tree.NUnit.sln"
-  
-environment:
-    COVERALLS_REPO_TOKEN:  
-       secure: rUUbYlqy0lB25hvNeMcyrrjUmuYbwfXgBXrpX++IFOXddPbupROFw1OJ97yqm7gQ
-       
 after_test: 
- -cmd:packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -filter:"+[*]*" -target:"packages\NUnit.ConsoleRunner.3.4.1\tools\nunit3-console.exe" -targetargs:"/domain:single Tree/Tree.NUnit/bin/Release/Tree.NUnit.dll" -output:coverage.xml
+ # generate report for NUnit 3 testing framework:
+ - cmd: .\Tree\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -filter:"+[*]*" -target:"Tree\packages\NUnit.ConsoleRunner.3.4.1\tools\nunit3-console.exe" -targetargs:"/domain:single Tree\Tree.NUnit\bin\Release\Tree.NUnit.dll" -output:coverage.xml
+ - cmd: .\Tree\packages\coveralls.net.0.412\tools\csmacnz.Coveralls.exe --opencover -i .\coverage.xml
+ 

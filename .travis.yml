@@ -1,3 +1,8 @@
 language: csharp
-solution: ./Tree/Tree.lib.sln
+solution: ./Tree/Tree.NUnit.sln
 os: linux
+install:
+  - nuget restore ./Tree/Tree.NUnit.sln
+script:
+ - xbuild /p:Configuration=Release ./Tree/Tree.NUnit.sln
+ - mono ./Tree/packages/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./Tree/Tree.NUnit/bin/Release/Tree.NUnit.dll
