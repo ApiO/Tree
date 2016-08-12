@@ -46,6 +46,12 @@ namespace Tree.NUnit
 
         }
 
+        [Test]
+        public void InitializationCheck()
+        {
+            Assert.IsTrue(_tree.Data.Count == 3);
+            Assert.IsTrue(_tree.Links.Count == 3);
+        }
 
         [Test]
         public void RootsDefined()
@@ -91,6 +97,12 @@ namespace Tree.NUnit
             Assert.IsTrue(_tree[_rootId].Link.Depth == 0);
             Assert.IsTrue(_tree[_child1Id].Link.Depth == 1);
             Assert.IsTrue(_tree[_child2Id].Link.Depth == 1);
+        }
+
+        [Test]
+        public void ContainsId()
+        {
+            Assert.IsTrue(_tree.Contains(_rootId));
         }
 
         [Test]
