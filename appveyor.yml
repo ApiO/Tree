@@ -16,5 +16,5 @@ build:
   verbosity: detailed
   
 after_test: 
-# generate report for NUnit 3 testing framework:
+ # generate report for NUnit 3 testing framework:
  - cmd: Tree\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -filter:"+[*]*" -target:"Tree\packages\NUnit.ConsoleRunner.3.4.1\tools\nunit3-console.exe" -targetargs:"/domain:single Tree\Tree.NUnit\bin\Release\Tree.NUnit.dll" -output:coverage.xml
