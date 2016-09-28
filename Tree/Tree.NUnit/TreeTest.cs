@@ -163,5 +163,14 @@ namespace Tree.NUnit
                 _tree.AddChild(99999999, 42, new Dummy());
             });
         }
+
+        [Test]
+        public void AddRootDoesNotThrow()
+        {
+            Assert.DoesNotThrow(() =>
+            {
+                _tree.AddRoot(999999, new Dummy());
+            });
+        }
     }
 }

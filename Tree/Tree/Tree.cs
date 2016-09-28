@@ -86,7 +86,19 @@ namespace Tree
 
             Leaves.Add(id);
         }
-        
+
+        public void AddRoot(long id, T data)
+        {
+            Roots.Add(id);
+
+            Data.Add(id, data);
+
+            Links.Add(id, new NodeLink { Id = id });
+
+            // set next of the previous last root to the current one id
+            Links[Roots[Roots.Count - 1]].Next = id;
+        }
+
         public IEnumerator GetEnumerator()
         {
             return Links.Select(x => x.Value).GetEnumerator();
