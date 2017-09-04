@@ -1,4 +1,4 @@
-#Tree
+# Tree
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/ApiO/Tree/blob/master/LICENSE) [![Framework version](https://img.shields.io/badge/.Net-3.5-brightgreen.svg)](https://fr.wikipedia.org/wiki/Microsoft_.NET) [![Project version](https://img.shields.io/badge/VS-2015-brightgreen.svg)](https://www.visualstudio.com/) [![GitHub release](https://img.shields.io/github/release/ApiO/Tree.svg)](https://github.com/ApiO/Tree/releases) [![NuGet](https://img.shields.io/nuget/v/Tree.svg)](https://www.nuget.org/packages/Tree)
 
@@ -6,7 +6,7 @@ A c# (1-n) tree implementation.
 This lib was designed to respond to a specific need and can be more generic/reusable, no efforts has been made on that way. For now, the code is left as this.
 
 
-##CI & QA
+## CI & QA
 
 | Build server                | Platform     | Status                                                                                                                    |
 |-----------------------------|--------------|---------------------------------------------------------------------------------------------------------------------------|
@@ -21,7 +21,7 @@ This implementation assume that each nodes has an unique identifier (long). The 
 To populate this tree you have use the `addChild()` function.
 
 
-##Features
+## Features
 
 - Use Template for data
 - Browse nodes by id (not index)
@@ -31,7 +31,7 @@ To populate this tree you have use the `addChild()` function.
 - Leaves
 
 
-##License
+## License
 
 MIT License
 
