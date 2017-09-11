@@ -13,9 +13,10 @@ This lib was designed to respond to a specific need and can be more generic/reus
 | AppVeyor                    | Windows      | [![Build status](https://ci.appveyor.com/api/projects/status/o1veopcf7g5syuy2/branch/master?svg=true)](https://ci.appveyor.com/project/ApiO/tree/branch/master)      |
 | Travis                      | Linux | [![Build Status](https://travis-ci.org/ApiO/Tree.svg?branch=master)](https://travis-ci.org/ApiO/Tree) |
 
-[![Coverage Status](https://coveralls.io/repos/github/ApiO/Tree/badge.svg?branch=master)](https://coveralls.io/github/ApiO/Tree?branch=master)
+[![Coverall Status](https://coveralls.io/repos/github/ApiO/Tree/badge.svg?branch=master)](https://coveralls.io/github/ApiO/Tree?branch=master)
+[![Coverty Status](https://img.shields.io/coverity/scan/13734.svg)](https://scan.coverity.com/projects/apio-tree)
 
-##Design constraint
+## Design constraint
 
 This implementation assume that each nodes has an unique identifier (long). The ids are not set by the tree, you must define them.
 To populate this tree you have use the `addChild()` function.
