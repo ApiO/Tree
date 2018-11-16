@@ -16,6 +16,8 @@ This lib was designed to respond to a specific need and can be more generic/reus
 [![Coverall Status](https://coveralls.io/repos/github/ApiO/Tree/badge.svg?branch=master)](https://coveralls.io/github/ApiO/Tree?branch=master)
 [![Coverty Status](https://img.shields.io/coverity/scan/13734.svg)](https://scan.coverity.com/projects/apio-tree)
 
+[![](https://codescene.io/projects/3688/status.svg) Get more details at **codescene.io**.](https://codescene.io/projects/3688/jobs/latest-successful/results)
+
 ## Design constraint
 
 This implementation assume that each nodes has an unique identifier (long). The ids are not set by the tree, you must define them.
