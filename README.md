@@ -1,6 +1,7 @@
 # Tree
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/ApiO/Tree/blob/master/LICENSE) [![Framework version](https://img.shields.io/badge/.Net-3.5-brightgreen.svg)](https://fr.wikipedia.org/wiki/Microsoft_.NET) [![Project version](https://img.shields.io/badge/VS-2015-brightgreen.svg)](https://www.visualstudio.com/) [![GitHub release](https://img.shields.io/github/release/ApiO/Tree.svg)](https://github.com/ApiO/Tree/releases) [![NuGet](https://img.shields.io/nuget/v/Tree.svg)](https://www.nuget.org/packages/Tree)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FApiO%2FTree.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FApiO%2FTree?ref=badge_shield)
 
 A c# (1-n) tree implementation.
 This lib was designed to respond to a specific need and can be more generic/reusable, no efforts has been made on that way. For now, the code is left as this.
@@ -57,3 +58,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FApiO%2FTree.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FApiO%2FTree?ref=badge_large)
